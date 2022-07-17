@@ -1,4 +1,5 @@
-import {useState} from 'react';
+import {useState} from 'react'; 
+import Axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
   const [days, setDays] = useState(0);
 
   const addToList = () => {
-    console.log(foodName + days);
+    Axios.post("http://localhost:3001/insert")
   }
 
   return (

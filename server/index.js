@@ -8,7 +8,7 @@ app.use(express.json());
 
 mongoose.connect("mongodb://127.0.0.1:27017/food");
 
-app.get("/", async(req, res) => {
+app.post("/inser", async(req, res) => {
     const food = new foodModel({foodName: "Apple", daySinceIAte: 3});
     try{
         await food.save();
